@@ -1,0 +1,18 @@
+.main-section{
+    display: flex;
+    margin-top: -70px;
+    height: 100vh;
+}
+
+.main-section__billboard{
+    margin-top: 70px;
+    padding: 80px 40px 60px 130px;
+    width: 50vw;
+    background-color: #313232;
+}
+
+.main-section__header{
+    font-size: 67px;
+    line-height: 63.65px;
+    letter-spacing: -3px;
+}
