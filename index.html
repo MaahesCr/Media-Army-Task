@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Автоцентр</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
         <div class="header__content">
             <nav>
                 <ul class="header__nav-links">
-                    <li>
+                    <li class="header__services-link">
                         <a href="#">Услуги</a>
                         <img class="header__dropdawn-icon" src="UI Kit/Icons/Dropdawn.svg" alt="">
                     </li>
@@ -29,17 +30,65 @@
                 </ul>
             </nav>
             <div>
-                <img src="UI Kit/Icons/Burger.svg" alt="">
-                <button>Запись на сервис</button>
+                <img class="header__burger" src="UI Kit/Icons/Burger.svg" alt="">
+                <button class="header__signing-service-btn">Запись на сервис</button>
             </div>
         </div>
     </header>
 
     <section class="main-section">
+        <div class="main-section__expand-navigation expand-navigation expand-navigation-false expand-navigation-visuallyhidden">
+            <div class="expand-navigation__links">
+                <a href="#"><h4>Ремонт автомобиля</h4></a>
+                <a href="#"><h4>Плановое ТО</h4></a>
+                <a href="#"><h4>Диагностика и ремонт автомобиля</h4></a>
+                <a href="#"><h4>Чип тюнинг</h4></a>
+            </div>
+        </div>
+
+        <div>
+            <div class="main-section__burger-content burger-content">
+                <div class="burger-content__left-column">
+                    <div class="burger-content__contact-info">
+                        <h3 class=""><a href="" type="phone" class="desctopHeadline-3 text-decoration-off">+7 (999) 123-45-67</a></h3>
+                        <h4><a class="text-decoration-off" href="" type="email">info@example.ru</a></h4>
+                        <p class="desctopText-1" >Работаем для вас:<br>Ежедневно с 9:00 до 21:00</p>
+                    </div>
+                    <div>
+                        <div class="burger-content__addresses">
+                            <div class="burger-content__first-address">
+                                <p class="desctopText-3">Адрес автоцентра:</p>
+                                <p class="desctopText-2">Екатеринбург, ул. Московский тракт 7 км, 2<br>+7 (999) 123-45-67</p>
+                            </div>
+                            <div class="burger-content__second-address">
+                                <p class="desctopText-3">Центр кузовного ремонта:</p>
+                                <p class="desctopText-2">Екатеринбург, ул. Московский тракт 7 км, 2<br>+7 (999) 123-45-67</p>
+                            </div>
+                        </div>
+                        <div class="burger-content__social-network-icons">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-section__grey-zone">
+
+            </div>
+        </div>
+
         <div class="main-section__billboard">
             <h1 class="main-section__header">Специализированный<br />автосервис</h1>
         </div>
         <div></div>
     </section>
+
+    <section style="height: 1000px">
+
+    </section>
+    <script src="./scripts/JS/main.js"></script>
 </body>
 </html>

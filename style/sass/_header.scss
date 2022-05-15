@@ -5,6 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    top: 0;
+    position: sticky;
 }
 
 .header__logo{
@@ -36,11 +38,19 @@
 .header__nav-links{
     display: flex;
     margin-bottom: 0;
+    height: 70px;
+    align-items: center
 }
 
 .header__nav-links>LI{
     list-style-type: none;
     margin-right: 40px;
+}
+
+.header__services-link{
+    height: 70px;
+    display: flex;
+    align-items: center;
 }
 
 .header__nav-links:first-child{
@@ -60,4 +70,24 @@
     margin-left: 10px;
     height: 5px;
     width: 10px;
+    //background: url('../../UI Kit/Icons/Dropdawn.svg');
 }
+
+.header__burger{
+    margin: 0 23px 0;
+    cursor: pointer;
+}
+
+.header__signing-service-btn{
+    background-color: #FEC110;
+    border-radius: 7px;
+    padding: 12px 20px;
+    border: none;
+    font-family: 'Arial Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 125%;
+    color: #2C2C2C;
+}
+

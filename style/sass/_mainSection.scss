@@ -4,6 +4,19 @@
     height: 100vh;
 }
 
+.main-section__expand-navigation{
+    top: 70px;
+    height: 225px;
+    width: 100vw;
+    position: absolute;
+    background-color: white;
+    border-top: 1px solid #FEC110 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s linear;  
+}
+
 .main-section__billboard{
     margin-top: 70px;
     padding: 80px 40px 60px 130px;

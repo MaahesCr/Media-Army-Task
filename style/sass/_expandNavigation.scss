@@ -1,0 +1,18 @@
+.expand-navigation-false{
+    display: none;  
+}
+
+.expand-navigation-visuallyhidden {  
+    opacity: 0;  
+}
+
+.expand-navigation__links>a{
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial Nova;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    color: #2C2C2C;
+}

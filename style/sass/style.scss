@@ -13,5 +13,12 @@
     padding: 0;
 }
 
+.text-decoration-off{
+    text-decoration: none;
+}
+
+@import './textStyles';
 @import './header';
+@import './burger-content';
+@import './expandNavigation';
 @import './mainSection';

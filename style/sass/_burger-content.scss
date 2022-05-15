@@ -1,0 +1,18 @@
+.burger-content{
+    top: 70px;
+    position: absolute;
+    width: 100vw;
+    background-color: white;
+    padding: 40px 0 40px 130px;
+    height: 85vh;
+}
+
+.burger-content__left-column{
+    width: 680px;
+    display: flex;
+    flex-direction: column;
+}
+
+.burger-content__second-address{
+    margin-top: 10px;
+}

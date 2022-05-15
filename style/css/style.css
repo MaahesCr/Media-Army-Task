@@ -9,6 +9,52 @@
   padding: 0;
 }
 
+.text-decoration-off {
+  text-decoration: none;
+}
+
+.desctopHeadline-3 {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 110%;
+  letter-spacing: -0.015em;
+  color: #FEC110;
+  margin-bottom: 10px;
+}
+
+.desctopText-1 {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #989898;
+}
+
+.desctopText-2 {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #989898;
+  margin-bottom: 0;
+}
+
+.desctopText-3 {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 200%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #2C2C2C;
+  margin-bottom: 0;
+}
+
 .header {
   height: 70px;
   width: 100vw;
@@ -16,6 +62,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  top: 0;
+  position: sticky;
 }
 
 .header__logo {
@@ -47,11 +95,19 @@
 .header__nav-links {
   display: flex;
   margin-bottom: 0;
+  height: 70px;
+  align-items: center;
 }
 
 .header__nav-links > LI {
   list-style-type: none;
   margin-right: 40px;
+}
+
+.header__services-link {
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .header__nav-links:first-child {
@@ -73,10 +129,79 @@
   width: 10px;
 }
 
+.header__burger {
+  margin: 0 23px 0;
+  cursor: pointer;
+}
+
+.header__signing-service-btn {
+  background-color: #FEC110;
+  border-radius: 7px;
+  padding: 12px 20px;
+  border: none;
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 125%;
+  color: #2C2C2C;
+}
+
+.burger-content {
+  top: 70px;
+  position: absolute;
+  width: 100vw;
+  background-color: white;
+  padding: 40px 0 40px 130px;
+  height: 85vh;
+}
+
+.burger-content__left-column {
+  width: 680px;
+  display: flex;
+  flex-direction: column;
+}
+
+.burger-content__second-address {
+  margin-top: 10px;
+}
+
+.expand-navigation-false {
+  display: none;
+}
+
+.expand-navigation-visuallyhidden {
+  opacity: 0;
+}
+
+.expand-navigation__links > a {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: Arial Nova;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 120%;
+  color: #2C2C2C;
+}
+
 .main-section {
   display: flex;
   margin-top: -70px;
   height: 100vh;
+}
+
+.main-section__expand-navigation {
+  top: 70px;
+  height: 225px;
+  width: 100vw;
+  position: absolute;
+  background-color: white;
+  border-top: 1px solid #FEC110;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s linear;
 }
 
 .main-section__billboard {
