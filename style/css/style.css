@@ -13,6 +13,16 @@
   text-decoration: none;
 }
 
+.desctopHeadline-1 {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 67px;
+  line-height: 95%;
+  letter-spacing: -0.03em;
+  color: #FEC110;
+}
+
 .desctopHeadline-3 {
   font-family: "Arial Nova";
   font-style: normal;
@@ -43,6 +53,16 @@
   color: #2C2C2C;
   margin: 10px 0;
   cursor: pointer;
+}
+
+.desctopButton {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: #2C2C2C;
+  margin-bottom: 0;
 }
 
 .desctopText-1 {
@@ -166,6 +186,41 @@
   font-size: 13px;
   line-height: 125%;
   color: #2C2C2C;
+  transition: all 1s ease;
+}
+
+.header__signing-service-btn-active {
+  height: 120px;
+  width: 276px;
+  border-radius: 0;
+  border: none;
+  margin-right: -130px;
+  position: relative;
+  z-index: 1001;
+  overflow: hidden;
+}
+
+.header__burger-content-zone {
+  top: 0;
+  width: 100vw;
+  position: absolute;
+  opacity: 100;
+}
+
+.header__grey-zone {
+  position: absolute;
+  top: 85vh;
+  height: 336px;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.header__burger-content-zone-false {
+  display: none;
+}
+
+.header__burger-content-zone-visuallyhidden {
+  opacity: 0;
 }
 
 .burger-content {
@@ -176,6 +231,8 @@
   padding: 40px 0 40px 130px;
   height: 85vh;
   display: flex;
+  z-index: 1000;
+  border-top: 1px solid #FEC110;
 }
 
 .burger-content__left-column {
@@ -233,12 +290,18 @@
   color: #2C2C2C;
 }
 
-.expand-navigation-false {
-  display: none;
-}
-
-.expand-navigation-visuallyhidden {
-  opacity: 0;
+.expand-navigation {
+  top: 70px;
+  height: 225px;
+  width: 100vw;
+  position: absolute;
+  background-color: white;
+  border-top: 1px solid #FEC110;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s linear;
+  z-index: 2000;
 }
 
 .expand-navigation__links > a {
@@ -252,50 +315,104 @@
   color: #2C2C2C;
 }
 
-.main-section {
-  display: flex;
-  flex-direction: column;
-  margin-top: -70px;
-  height: 100vh;
-}
-
-.main-section__expand-navigation {
-  top: 70px;
-  height: 225px;
-  width: 100vw;
-  position: absolute;
-  background-color: white;
-  border-top: 1px solid #FEC110;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s linear;
-}
-
-.main-section__burger-content-zone {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
+.expand-navigation-false {
   display: none;
 }
 
-.main-section__grey-zone {
-  height: 336px;
+.expand-navigation-visuallyhidden {
+  opacity: 0;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: -70px;
+  min-height: 650px;
+  height: 100vh;
+  overflow: hidden;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.65);
 }
 
 .main-section__billboard {
   margin-top: 70px;
   padding: 80px 40px 60px 130px;
-  width: 50vw;
+  width: 820px;
   background-color: #313232;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .main-section__header {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
   font-size: 67px;
-  line-height: 63.65px;
-  letter-spacing: -3px;
+  line-height: 95%;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+}
+
+.main-section__numb-of-phone {
+  margin-bottom: 60px;
+}
+
+.main-section__contact-and-address-info {
+  margin-bottom: 10px;
+}
+
+.main-section__contact-and-address-info > p {
+  margin: 0;
+}
+
+.main-section__contact-and-address-info > p:nth-child(2n) {
+  color: white;
+}
+
+.main-section__view-services-btn {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  gap: 15px;
+  background: #FEC110;
+  border-radius: 7px;
+}
+
+.main-section__slider {
+  margin-top: 70px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#carouselExampleIndicators {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  z-index: -1;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.d-block {
+  object-fit: cover;
+  height: 100%;
+}
+
+.carousel-control-prev > img {
+  height: 40px;
+  width: 40px;
+  margin-bottom: 40px;
+  background-image: url("./UI Kit/Icons/CaruselBtnLeft.svg");
 }
 
 /*# sourceMappingURL=style.css.map */

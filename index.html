@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Автоцентр</title>
 </head>
 <body>
@@ -31,13 +30,12 @@
             </nav>
             <div>
                 <img class="header__burger" src="UI Kit/Icons/Burger.svg" alt="">
-                <button class="header__signing-service-btn">Запись на сервис</button>
+                <button class="header__signing-service-btn">
+                    Запись на сервис
+                </button>
             </div>
         </div>
-    </header>
-
-    <section class="main-section">
-        <div class="main-section__expand-navigation expand-navigation expand-navigation-false expand-navigation-visuallyhidden">
+        <div class="header__expand-navigation expand-navigation expand-navigation-false expand-navigation-visuallyhidden">
             <div class="expand-navigation__links">
                 <a href="#"><h4>Ремонт автомобиля</h4></a>
                 <a href="#"><h4>Плановое ТО</h4></a>
@@ -45,9 +43,9 @@
                 <a href="#"><h4>Чип тюнинг</h4></a>
             </div>
         </div>
-
-        <div class="main-section__burger-content-zone">
-            <div class="main-section__burger-content burger-content">
+        
+        <div class="header__burger-content-zone header__burger-content-zone-false header__burger-content-zone-visuallyhidden">
+            <div class="header__burger-content burger-content">
                 <div class="burger-content__left-column">
                     <div class="burger-content__contact-info">
                         <h3 class=""><a href="tel:+7 (999) 123-45-67" type="phone" class="desctopHeadline-3 text-decoration-off">+7 (999) 123-45-67</a></h3>
@@ -94,20 +92,75 @@
                     <a class="desctopLink text-decoration-off" href="">Условия конфиденциальности</a>
                 </div>
             </div>
-            <div class="main-section__grey-zone">
+
+            <div class="header__grey-zone">
                 
             </div>
         </div>
+        
 
+    </header>
+
+    <section class="main-section">
         <div class="main-section__billboard">
-            <h1 class="main-section__header">Специализированный<br />автосервис</h1>
+            <div class="main-section__billboard-info">
+                <h1 class="main-section__header">Специализированный<br />автосервис</h1>
+                <a class="text-decoration-off" href="tel:+7 (999) 123-45-67">
+                    <h1 class="desctopHeadline-1 main-section__numb-of-phone">+7 (999) 123-45-67</h1>
+                </a>
+                <div class="main-section__contact-and-address-info">
+                    <p class="desctopText-1">Работаем для вас:</p>
+                    <p class="desctopText-1">Ежедневно с 9:00 до 21:00</p>
+                </div>
+                <div class="main-section__contact-and-address-info">
+                    <p class="desctopText-1">По адресу:</p>
+                    <p class="desctopText-1">Екатеринбург, ул. Московский тракт 7 км, 2</p>
+                </div>
+            </div>
+            <button class="main-section__view-services-btn">
+                <h6 class="desctopButton">Смотреть услуги</h6>
+                <img src="./UI Kit/Icons/DownArrow.svg" alt="">
+            </button>
         </div>
-        <div></div>
+
+        <div class="main-section__slider">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./UI Kit/Imgs/SliderPage1.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./UI Kit/Imgs/SliderPage2.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./UI Kit/Imgs/SliderPage3.png" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                    <img class="carousel-control-prev-icon" aria-hidden="true" src="./UI Kit/Icons/CaruselBtnLeft.svg" alt="">
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Следующий</span>
+                </button>
+              </div>
+        </div>
+
     </section>
 
-    <section style="height: 1000px">
-
+    <section style="height: 1000px; width: 500px;">
+        
     </section>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     
     <script src="./scripts/JS/main.js"></script>
-</body>
+    </body>
 </html>

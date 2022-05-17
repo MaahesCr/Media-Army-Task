@@ -6,6 +6,8 @@
     padding: 40px 0 40px 130px;
     height: 85vh;
     display: flex;
+    z-index: 1000;
+    border-top: 1px solid #FEC110 ;
 }
 
 .burger-content__left-column{

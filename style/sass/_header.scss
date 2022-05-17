@@ -89,5 +89,43 @@
     font-size: 13px;
     line-height: 125%;
     color: #2C2C2C;
+    transition: all 1s ease;
 }
 
+.header__signing-service-btn-active{
+    //padding: 50px 72.5px;
+    height: 120px;
+    width: 276px;
+    border-radius: 0;
+    border: none;
+    margin-right: -130px;
+    position: relative;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.header__burger-content-zone{
+    top: 0;
+    width: 100vw;
+    position: absolute;
+    opacity: 100;  
+    //display: flex;
+    //flex-direction: column;
+    
+}
+
+.header__grey-zone{
+    position: absolute;
+    top: 85vh;
+    height: 336px;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.65); 
+}
+
+.header__burger-content-zone-false{
+    display: none;  
+}
+
+.header__burger-content-zone-visuallyhidden {  
+    opacity: 0;  
+}
