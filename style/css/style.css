@@ -24,6 +24,27 @@
   margin-bottom: 10px;
 }
 
+.desctopHeadline-4 {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #989898;
+}
+
+.desctopLink {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #2C2C2C;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
 .desctopText-1 {
   font-family: "Arial Nova";
   font-style: normal;
@@ -154,16 +175,62 @@
   background-color: white;
   padding: 40px 0 40px 130px;
   height: 85vh;
+  display: flex;
 }
 
 .burger-content__left-column {
   width: 680px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.burger-content__email-address-link {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 120%;
+  text-decoration-line: underline;
+  color: #2C2C2C;
 }
 
 .burger-content__second-address {
   margin-top: 10px;
+}
+
+.burger-content__social-network-icons {
+  margin-top: 40px;
+}
+
+.burger-content__social-network-icons > img {
+  margin: 0 10px 0 0;
+  cursor: pointer;
+}
+
+.burger-content__right-column {
+  width: 428px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger-content__hr {
+  color: #B6B6B6;
+  margin: 20px 0;
+}
+
+.burger-content__login-to-accaunt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger-content__custom-h4 {
+  color: #2C2C2C;
 }
 
 .expand-navigation-false {
@@ -187,6 +254,7 @@
 
 .main-section {
   display: flex;
+  flex-direction: column;
   margin-top: -70px;
   height: 100vh;
 }
@@ -202,6 +270,19 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s linear;
+}
+
+.main-section__burger-content-zone {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.main-section__grey-zone {
+  height: 336px;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .main-section__billboard {

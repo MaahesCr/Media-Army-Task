@@ -5,14 +5,60 @@
     background-color: white;
     padding: 40px 0 40px 130px;
     height: 85vh;
+    display: flex;
 }
 
 .burger-content__left-column{
     width: 680px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.burger-content__email-address-link{
+    font-family: 'Arial Nova';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    text-decoration-line: underline;
+    color: #2C2C2C; 
 }
 
 .burger-content__second-address{
     margin-top: 10px;
+}
+
+.burger-content__social-network-icons{
+    margin-top: 40px;
+}
+
+.burger-content__social-network-icons>img{
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.burger-content__right-column{
+    width: 428px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-content__hr{
+    color: #B6B6B6;
+    margin: 20px 0;
+}
+
+.burger-content__login-to-accaunt{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger-content__custom-h4{
+    color: #2C2C2C;
 }
