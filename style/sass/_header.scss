@@ -7,6 +7,8 @@
     justify-content: space-between;
     top: 0;
     position: sticky;
+    z-index: 1000;
+    
 }
 
 .header__logo{
@@ -79,6 +81,7 @@
 }
 
 .header__signing-service-btn{
+    position: relative;
     background-color: #FEC110;
     border-radius: 7px;
     padding: 12px 20px;
@@ -89,7 +92,8 @@
     font-size: 13px;
     line-height: 125%;
     color: #2C2C2C;
-    transition: all 1s ease;
+    z-index: 2000;
+    //transition: all 1s ease;
 }
 
 .header__signing-service-btn-active{
@@ -97,7 +101,6 @@
     height: 120px;
     width: 276px;
     border-radius: 0;
-    border: none;
     margin-right: -130px;
     position: relative;
     z-index: 1001;
@@ -109,9 +112,9 @@
     width: 100vw;
     position: absolute;
     opacity: 100;  
+    transition: all 0.3s linear; 
     //display: flex;
-    //flex-direction: column;
-    
+    //flex-direction: column;  
 }
 
 .header__grey-zone{

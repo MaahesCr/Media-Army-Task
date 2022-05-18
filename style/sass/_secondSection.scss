@@ -1,0 +1,60 @@
+.second-section{
+    padding: 180px 130px;
+    background-color: #E4E4E4;
+}
+
+.second-section__under-hr-text-block{
+    margin: 10px 0 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-section__custom-desctop-text-1{
+    color: #989898;
+}
+
+.second-section__years-of-work-div{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 180px;
+}
+
+.second-section__number-of-years-header{
+    width: 650px;
+    margin-right: 40px;
+}
+
+.second-section__few-words-paragraph{
+    max-width: 650px;
+}
+
+.second-section__custom-desctop-headline-1{
+    color: #2C2C2C;
+    margin-bottom: 60px;
+}
+
+.second-section__cards-place{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.second-section__card{
+    height: 490px;
+    min-width: 400px;
+    max-width: 650px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    background-color: white;
+}
+
+.second-section__card-img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.second-section__card-more-info-area{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
