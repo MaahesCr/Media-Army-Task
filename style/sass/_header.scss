@@ -1,6 +1,6 @@
 .header{
     height: 70px;
-    width: 100vw;
+    //width: 100vw;
     background-color: white;
     display: flex;
     align-items: center;
@@ -8,7 +8,6 @@
     top: 0;
     position: sticky;
     z-index: 1000;
-    
 }
 
 .header__logo{
@@ -16,6 +15,7 @@
     align-items: center;
     margin-left: 130px;
     cursor: pointer;
+    
 }
 
 .header__favicon{
@@ -27,7 +27,7 @@
 .header__content{
     display: flex;
     align-items: center;
-    margin-right: 130px;
+    padding-right: 130px;
 }
 
 .header__content>nav{

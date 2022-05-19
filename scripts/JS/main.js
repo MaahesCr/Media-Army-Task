@@ -69,35 +69,58 @@ let caruselArrowRight = $('#carusel-arrow-right')[0];
 caruselArrowLeft.onclick = function () {
     currentSlide = currentSlide % 3;
 
-    arrOfSlides[currentSlide].animate({marginLeft: '-1000px', opacity: 0}, 600)
+    let prevSlide = (currentSlide + 1) % 3;
 
+    arrOfSlides[currentSlide].animate({opacity: 0}, 150)
+    arrOfSlides[prevSlide%3].animate({opacity: 0}, 0)
     setTimeout(function () {  
+        // накинуть класс  
+        arrOfSlides[prevSlide%3].addClass('slider-img-active')
+        arrOfSlides[prevSlide%3].animate({order: 0}, 0)
+        arrOfSlides[currentSlide].animate({order: 2}, 0)
+        // убрать класс
         arrOfSlides[currentSlide].removeClass('slider-img-active')
-        currentSlide = currentSlide + 1;
-    }, 300);
-    
-    arrOfSlides[(currentSlide+1)%3].addClass('slider-img-active')     
-    arrOfSlides[(currentSlide+1)%3].animate({marginLeft: '1000px', opacity: 0}, 0) //marginTop: `-${$('.main-section__slider').height()}`}, 0)
-    
-    arrOfSlides[(currentSlide+1)%3].animate({marginLeft: '0', opacity: '100' }, 300)   
+        arrOfSlides[prevSlide%3].animate({opacity: 1}, 150)
+        currentSlide = (currentSlide+1)%3;
+    }, 150);
 }
 
 caruselArrowRight.onclick = function () {
-    const reversSlides = [0, 1, 2]
     currentSlide = currentSlide % 3;
+    let prevSlide = ((currentSlide - 1) < 0) ? 2 : currentSlide - 1;
 
-    //arrOfSlides[currentSlide].animate({marginLeft: '-1000px', opacity: 0}, 600)
+    // текущий order делаешь 2 а новый 0 
+    // уменьшить до нуля opac текущий
+    // получить новый order с opac = 0
+    // opac на 100
 
+    arrOfSlides[currentSlide].animate({opacity: 0}, 150)
+    arrOfSlides[prevSlide%3].animate({opacity: 0}, 0)
     setTimeout(function () {  
-        //arrOfSlides[currentSlide].removeClass('slider-img-active')
-        //currentSlide = (currentSlide - 1)%3;    //(-0) = 0 (-1) = 2 (-2) = 1 (-3) = 0 
-        //let prevVal = 2;
-        currentSlide = Math.abs((currentSlide - 1)%3);  
-        console.log(currentSlide)
-    }, 300);
-    
-    //arrOfSlides[(currentSlide+1)%3].addClass('slider-img-active')     
-    //arrOfSlides[(currentSlide+1)%3].animate({marginLeft: '1000px', opacity: 0}, 0) //marginTop: `-${$('.main-section__slider').height()}`}, 0)
-    
-    //arrOfSlides[(currentSlide+1)%3].animate({marginLeft: '0', opacity: '100' }, 300)   
+        // накинуть класс  
+        arrOfSlides[prevSlide%3].addClass('slider-img-active')
+        arrOfSlides[prevSlide%3].animate({order: 0}, 0)
+        arrOfSlides[currentSlide].animate({order: 2}, 0)
+        // убрать класс
+        arrOfSlides[currentSlide].removeClass('slider-img-active')
+        arrOfSlides[prevSlide%3].animate({opacity: 1}, 150)
+        currentSlide = ((currentSlide - 1) < 0) ? 2 : currentSlide - 1;
+    }, 150);
 }
+
+    //arrOfSlides[prevSlide%3].animate({order: 0}, 300)   // выцветает
+    //arrOfSlides[currentSlide].animate({order: 2}, 300) //свайп лефт
+    
+    
+    /*
+    arrOfSlides[prevSlide%3].animate({marginLeft: `${-2*arrOfSlides[currentSlide].height()}`, opacity: 0}, 0)     
+    console.log(arrOfSlides[currentSlide].height())
+    arrOfSlides[prevSlide%3].addClass('slider-img-active')  // взять отступ равный длинне курентного
+    arrOfSlides[prevSlide%3].animate({marginLeft: '0', opacity: 2}, 5000) 
+    arrOfSlides[currentSlide].animate({marginLeft: `${arrOfSlides[currentSlide].height()}`, opacity: 0}, 5000)
+    setTimeout(function () {
+        arrOfSlides[currentSlide].removeClass('slider-img-active')
+        arrOfSlides[prevSlide%3].animate({marginLeft: '0', opacity: 100}, 0)
+        currentSlide = ((currentSlide - 1) < 0) ? 2 : currentSlide - 1;
+    }, 2500)
+    */
