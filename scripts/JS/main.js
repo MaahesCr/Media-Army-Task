@@ -3,36 +3,63 @@ let signingServiceBtn = $('.header__signing-service-btn')[0];
 let burgerContent = $('.header__burger-content-zone');
 let openHeaderBurger = false;
 
+const mediaQueryDesktop = window.matchMedia('(min-width: 745px)')
+const mediaQueryTablet = window.matchMedia('(max-width: 744px) and (min-width: 376px)')
+
 headerBurger.onclick = function () {
-    // смена значка
-    openHeaderBurger = !openHeaderBurger;
-    (openHeaderBurger) ? headerBurger.src = 'UI Kit/Icons/BurgerClouse.svg' : headerBurger.src = 'UI Kit/Icons/Burger.svg'
-    
-    // смена классов для кнопки запись на сервис (старая реализация)
-    //signingServiceBtn.classList.toggle('header__signing-service-btn-active');
 
-    // смена свойств кнопки
-    if (openHeaderBurger){
-        $('.header__signing-service-btn').animate({padding: '50px 72.5px', borderRadius: 0, marginTop: '47px' ,marginRight: '-130px'}, 300)
-        $('.header__burger').animate({marginTop: '-47px'}, 300)
-    } else {
-        $('.header__signing-service-btn').animate({padding: '12px 20px',  borderRadius: '7px', marginTop: '0px', marginRight: 0 }, 300);
-        $('.header__burger').animate({marginTop: '0px'}, 300)
+    if (mediaQueryDesktop.matches) {
+        // смена значка
+        openHeaderBurger = !openHeaderBurger;
+        (openHeaderBurger) ? headerBurger.src = 'UI Kit/Icons/BurgerClouse.svg' : headerBurger.src = 'UI Kit/Icons/Burger.svg'
+        
+        // смена классов для кнопки запись на сервис (старая реализация)
+        //signingServiceBtn.classList.toggle('header__signing-service-btn-active');
+
+        // смена свойств кнопки
+        if (openHeaderBurger){
+            $('.header__signing-service-btn').animate({padding: '50px 72.5px', borderRadius: 0, marginTop: '47px' ,marginRight: '-130px'}, 300)
+            $('.header__burger').animate({marginTop: '-47px'}, 300)
+        } else {
+            $('.header__signing-service-btn').animate({padding: '12px 20px',  borderRadius: '7px', marginTop: '0px', marginRight: 0 }, 300);
+            $('.header__burger').animate({marginTop: '0px'}, 300)
+        }
+
+        
+        // смена класса для содержимого burger-content
+        if (burgerContent.hasClass('header__burger-content-zone-false')) {  
+            burgerContent.removeClass('header__burger-content-zone-false');  
+            setTimeout(function () {  
+                burgerContent.removeClass('header__burger-content-zone-visuallyhidden');  
+            }, 0.3);  
+        } else {  
+            burgerContent.addClass('header__burger-content-zone-visuallyhidden'); 
+            burgerContent.one('transitionend', function(e) {  
+                burgerContent.addClass('header__burger-content-zone-false');  
+        });  
+        }
     }
 
+    if (mediaQueryTablet.matches) {
+        openHeaderBurger = !openHeaderBurger;
+        (openHeaderBurger) ? headerBurger.src = 'UI Kit/Icons/BurgerClouse.svg' : headerBurger.src = 'UI Kit/Icons/Burger.svg'
+        
+        $('.burger-content').css('display', 'none')
+
+        if (burgerContent.hasClass('header__burger-content-zone-false')) {  
+            burgerContent.removeClass('header__burger-content-zone-false');  
+            setTimeout(function () {  
+                burgerContent.removeClass('header__burger-content-zone-visuallyhidden');  
+            }, 0.3);  
+        } else {  
+            burgerContent.addClass('header__burger-content-zone-visuallyhidden'); 
+            burgerContent.one('transitionend', function(e) {  
+                burgerContent.addClass('header__burger-content-zone-false');  
+        });  
+        }
     
-    // смена класса для содержимого burger-content
-    if (burgerContent.hasClass('header__burger-content-zone-false')) {  
-        burgerContent.removeClass('header__burger-content-zone-false');  
-        setTimeout(function () {  
-            burgerContent.removeClass('header__burger-content-zone-visuallyhidden');  
-        }, 0.3);  
-    } else {  
-        burgerContent.addClass('header__burger-content-zone-visuallyhidden'); 
-        burgerContent.one('transitionend', function(e) {  
-            burgerContent.addClass('header__burger-content-zone-false');  
-    });  
     }
+
 }
 
 let servicesLink = document.querySelector(".header__services-link");
@@ -74,11 +101,9 @@ caruselArrowLeft.onclick = function () {
     arrOfSlides[currentSlide].animate({opacity: 0}, 150)
     arrOfSlides[prevSlide%3].animate({opacity: 0}, 0)
     setTimeout(function () {  
-        // накинуть класс  
         arrOfSlides[prevSlide%3].addClass('slider-img-active')
         arrOfSlides[prevSlide%3].animate({order: 0}, 0)
         arrOfSlides[currentSlide].animate({order: 2}, 0)
-        // убрать класс
         arrOfSlides[currentSlide].removeClass('slider-img-active')
         arrOfSlides[prevSlide%3].animate({opacity: 1}, 150)
         currentSlide = (currentSlide+1)%3;
@@ -108,6 +133,26 @@ caruselArrowRight.onclick = function () {
     }, 150);
 }
 
+// удалить все что ниже 
+// hovers на cards
+/*
+let cards = [$('#first-card'), $('#second-card'), $('#third-card'), $('#fourth-card') ]
+
+for (let i = 0; i < cards.length; i++){
+    cards[i].hover(function () {
+        //cards[i][0].children[1].animate({backgroundColor: '#FEC110'}, 5000)
+        //cards[i][0].children[1].style.backgroundColor = '#FEC110';
+        //cards[i][0].children[1].children[0].children[1].style.color = 'white'
+        //cards[i][0].children[1].children[1].children[0].setAttribute("style", "fill: #313232");
+        //cards[i][0].children[1].children[1].children[1].setAttribute("style", "stroke: white")
+    }, function () {
+        //cards[i][0].children[1].style.backgroundColor = 'white';
+        //cards[i][0].children[1].children[0].children[1].style.color = '#989898'
+        //cards[i][0].children[1].children[1].children[0].setAttribute("style", "fill: #FEC110");
+        //cards[i][0].children[1].children[1].children[1].setAttribute("style", "stroke: #2C2C2C")
+    })
+}
+*/
     //arrOfSlides[prevSlide%3].animate({order: 0}, 300)   // выцветает
     //arrOfSlides[currentSlide].animate({order: 2}, 300) //свайп лефт
     

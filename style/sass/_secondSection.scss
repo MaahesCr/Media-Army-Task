@@ -35,17 +35,25 @@
 
 .second-section__cards-place{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    margin-right: -40px;
 }
 
 .second-section__card{
-    height: 490px;
     min-width: 400px;
     max-width: 650px;
-    margin-left: 40px;
+    margin-right: 40px;
     margin-bottom: 40px;
     background-color: white;
+    cursor: pointer;
+}
+
+.second-section__card:hover{
+    background-color: #FEC110;
+}
+
+.second-section__card{
+    transition: background-color 0.3s linear;;
 }
 
 .second-section__card-img{
@@ -56,5 +64,34 @@
 .second-section__card-more-info-area{
     display: flex;
     justify-content: space-between;
-    margin: 40px;
+    padding: 40px;
+    transition: all 0.3s linear;
+}
+
+.second-section__card:hover .second-section__card-more-info-area div h4:nth-child(2){
+    color: white;
+}
+
+.second-section__card-more-info-area div h4:nth-child(2){
+    transition: color 0.3s linear;
+}
+
+.second-section__card:hover .second-section__card-more-info-area>svg circle{
+    fill: #313232;
+}
+
+.second-section__card:hover .second-section__card-more-info-area>svg path{
+    stroke: white;
+}
+
+.second-section__card-more-info-area>svg circle{
+    transition: fill 0.3s linear;
+}
+
+.second-section__card-more-info-area>svg path{
+    transition: stroke 0.3s linear;
+}
+
+.second-section__custom-desctop-headline-4{
+    color: #2C2C2C;
 }

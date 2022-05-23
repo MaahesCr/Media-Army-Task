@@ -1,0 +1,136 @@
+@media screen and (max-width: 744px) and (min-width: 376px){
+    .header{
+        height: 60px;
+    }
+
+    .header__logo{
+        margin-left: 52px;
+    }
+
+    .header__content{
+        padding-right: 24px;
+    }
+
+    .header__content > nav{
+        display: none;
+    }
+
+    .header__burger-btn-content{
+        display: flex;
+        flex-direction: row-reverse
+    }
+
+    .burger-content{
+        top: 60px;
+        padding: 35px 52px 87px 52px;
+    }
+
+    .main-section{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .main-section__billboard{
+        margin-top: 60px;
+        padding: 60px 52px;
+        height: 100vh;
+        width: auto;
+    }
+
+    .main-section__header{
+        font-family: 'Arial Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 95%;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+    }
+
+    .desctopHeadline-1{
+        font-family: 'Arial Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 95%;
+        letter-spacing: -0.02em;
+        color: #FEC110;
+        margin-bottom: 40px;
+    }
+
+    .main-section__contact-and-address-info{
+        margin-bottom: 14px;
+    }
+
+    .main-section__slider{
+        margin-top: 0;
+        height: 100vh;
+    }
+
+    .main-section__slider-arrow-left{
+        margin: 0 5px 40px 40px;
+    }
+
+    .main-section__slider-arrow-right{
+        margin-bottom: 40px;
+    }
+
+    .second-section{
+        padding: 120px 52px;
+    }
+
+    .second-section__years-of-work-div{
+        flex-direction: column;    
+        margin-bottom: 120px;
+    }
+    
+    .second-section__number-of-years-header{
+        width: auto;
+    }
+
+    .desctopHeadline-0{
+        font-family: 'Arial Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 68px;
+        line-height: 90%;
+        letter-spacing: -0.03em;
+        margin-bottom: 40px;
+    }
+
+    .desctopDescription{
+        font-family: 'Arial Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: -0.01em;
+        color: #2C2C2C;
+    }
+
+    .second-section__custom-desctop-headline-1{
+        font-family: 'Arial Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 95%;
+        letter-spacing: -0.02em;
+        color: #2C2C2C;
+    }
+
+    .second-section__card{
+        min-width: 0;
+        max-width: 310px;
+        margin-right: 20px;
+        height: 352px;
+    }
+
+    .second-section__card-img{
+        height: 268px;
+    }
+
+    .second-section__card-more-info-area{
+        padding: 20px;
+    }
+}

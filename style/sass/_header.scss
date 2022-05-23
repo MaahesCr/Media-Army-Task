@@ -132,3 +132,13 @@
 .header__burger-content-zone-visuallyhidden {  
     opacity: 0;  
 }
+
+@media screen and (max-width: 1283px) and (min-width: 745px){
+    .header__content{
+        padding-right: 100px;
+    }
+
+    .header__nav-links > LI{
+        margin-right: 10px;
+    }
+}

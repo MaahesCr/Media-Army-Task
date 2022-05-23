@@ -28,7 +28,7 @@
                     <li><a href="#">Контакты</a></li>
                 </ul>
             </nav>
-            <div>
+            <div class="header__burger-btn-content">
                 <img class="header__burger" src="UI Kit/Icons/Burger.svg" alt="">
                 <button class="header__signing-service-btn">
                     Запись на сервис 
@@ -93,6 +93,53 @@
                 </div>
             </div>
 
+            <div class="burger-content-tablet">
+                <div class="burger-content-tablet__links">
+                    <ul class="burger-content-tablet__first-column">
+                        <li><a class="text-decoration-off" href="#">О компании</a></li>
+                        <li><a class="text-decoration-off" href="#">Гарантии</a></li>
+                        <li><a class="text-decoration-off" href="#">Новости</a></li>
+                    </ul>
+                    <ul>
+                        <li><a class="text-decoration-off" href="#">Акции</a></li>
+                        <li><a class="text-decoration-off" href="#">Контакты</a></li>
+                    </ul>   
+                </div>
+                <hr class="burger-content-tablet__hr">
+                <div>
+                    <h3 class="burger-content-tablet__services-h3">Услуги</h3>
+                    <div class="burger-content-tablet__services-block">
+                        <ul class="burger-content-tablet__first-column"> 
+                            <li><a class="text-decoration-off" href="#">Ремонт автомобиля</a></li>
+                            <li><a class="text-decoration-off" href="#">Плановое ТО</a></li>
+                        </ul>
+                        <ul>
+                            <li><a class="text-decoration-off" href="#">Диагностика</a></li>
+                            <li><a class="text-decoration-off" href="#">Чип тюнинг</a></li>
+                        </ul>   
+                    </div>
+                </div>
+                <hr class="burger-content-tablet__hr">
+                <div>
+                    <h3 class="burger-content-tablet__services-h3">Автоцентры</h3>
+                    <div>
+                        <div class="desctopLink">Автосервис VOLVO</div>
+                        <div class="desctopLink">Автосервис Land Rover</div>
+                        <div class="desctopLink">Автосервис VAG</div>
+                        <div class="desctopLink">Автосервис BMW</div>
+                        <div class="desctopLink">Автосервис Mercedes</div>
+                        <div class="desctopLink">Кузовной ремонт и детейлинг</div>
+                    </div>  
+                </div>
+                <hr class="burger-content-tablet__hr">
+                <a class="burger-content-tablet__login-to-accaunt text-decoration-off">
+                    <h4 class="desctopHeadline-4 burger-content-tablet__custom-h4">Личный кабинет</h4>
+                    <img src="./UI Kit/Icons/PersonalAcc.svg" alt="">
+                </a>     
+                <h3 class=""><a href="tel:+7 (999) 123-45-67" type="phone" class="desctopHeadline-3 text-decoration-off">+7 (999) 123-45-67</a></h3>
+                        
+            </div>
+
             <div class="header__grey-zone">
                 
             </div>
@@ -117,10 +164,12 @@
                     <p class="desctopText-1">Екатеринбург, ул. Московский тракт 7 км, 2</p>
                 </div>
             </div>
-            <button class="main-section__view-services-btn">
-                <h6 class="desctopButton">Смотреть услуги</h6>
-                <img src="./UI Kit/Icons/DownArrow.svg" alt="">
-            </button>
+            <a class="text-decoration-off" href="#car-services">
+                <button class="main-section__view-services-btn">
+                    <h6 class="desctopButton">Смотреть услуги</h6>
+                    <img src="./UI Kit/Icons/DownArrow.svg" alt="">
+                </button>
+            </a>
         </div>
 
         <div class="main-section__slider">
@@ -150,35 +199,73 @@
                 <h1 class="desctopHeadline-0">Работаем<br>с 2012 года</h1>
             </div>
             <div class="second-section__few-words-paragraph">
-                <p class="desctopDescription">Вашим автомобилем будут заниматься люди <br> с большим опытом, полученным за многие годы <br> и прошедшие множество обучений.
+                <p class="desctopDescription">Вашим автомобилем будут заниматься люди с большим опытом, полученным за многие годы и прошедшие множество обучений.
                 <br><br> Сотрудники обладают огромным багажом знаний, применяемых на практике. </p>
             </div>
         </div>
         
+        <a name="car-services"></a>
         <h1 class="desctopHeadline-1 second-section__custom-desctop-headline-1" >Услуги автосервиса</h1>
 
         <div class="second-section__cards-place">
-            <div class="second-section__card">
-                <img class="second-section__card-img" src="./UI Kit/Imgs/CardImg1.png" alt="">
-                <div class="second-section__card-more-info-area">
-                    <div>
-                        <h4 class="desctopHeadline-4">Ремонт автомобиля</h4>
-                        <h4 class="desctopHeadline-4">01</h4>
+            <div>
+                <div id="first-card" class="second-section__card">
+                    <img class="second-section__card-img" src="./UI Kit/Imgs/CardImg1.png" alt="">
+                    <div class="second-section__card-more-info-area">
+                        <div>
+                            <h4 class="desctopHeadline-4 second-section__custom-desctop-headline-4">Ремонт автомобиля</h4>
+                            <h4 class="desctopHeadline-4">01</h4>
+                        </div>
+                        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20.0015" r="20" fill="#FEC110"/>
+                            <path d="M18 14.0015L24 20.0015L18 26.0015" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                     </div>
-                    <img src="./UI Kit/Icons/MoreInfoArrow.svg" alt="">
+                </div>
+
+                <div id="third-card" class="second-section__card">
+                    <img class="second-section__card-img" src="./UI Kit/Imgs/CardImg3.png" alt="">
+                    <div class="second-section__card-more-info-area">
+                        <div>
+                            <h4 class="desctopHeadline-4 second-section__custom-desctop-headline-4">Ремонт автомобиля</h4>
+                            <h4 class="desctopHeadline-4">03</h4>
+                        </div>
+                        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20.0015" r="20" fill="#FEC110"/>
+                            <path d="M18 14.0015L24 20.0015L18 26.0015" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
 
-            <div class="second-section__card">
-                
-            </div>
+            <div>
+                <div id="second-card" class="second-section__card">
+                    <img class="second-section__card-img" src="./UI Kit/Imgs/CardImg2.png" alt="">
+                    <div class="second-section__card-more-info-area">
+                        <div>
+                            <h4 class="desctopHeadline-4 second-section__custom-desctop-headline-4">Ремонт автомобиля</h4>
+                            <h4 class="desctopHeadline-4">02</h4>
+                        </div>
+                        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20.0015" r="20" fill="#FEC110"/>
+                            <path d="M18 14.0015L24 20.0015L18 26.0015" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
 
-            <div class="second-section__card">
-                
-            </div>
-
-            <div class="second-section__card">
-                
+                <div id="fourth-card" class="second-section__card">
+                    <img class="second-section__card-img" src="./UI Kit/Imgs/CardImg4.png" alt="">
+                    <div class="second-section__card-more-info-area">
+                        <div>
+                            <h4 class="desctopHeadline-4 second-section__custom-desctop-headline-4">Ремонт автомобиля</h4>
+                            <h4 class="desctopHeadline-4">04</h4>
+                        </div>
+                        <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20.0015" r="20" fill="#FEC110"/>
+                            <path d="M18 14.0015L24 20.0015L18 26.0015" stroke="#2C2C2C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
 
         </div>
