@@ -245,17 +245,7 @@
   opacity: 0;
 }
 
-@media screen and (max-width: 1283px) and (min-width: 745px) {
-  .header__content {
-    padding-right: 100px;
-  }
-
-  .header__nav-links > LI {
-    margin-right: 10px;
-  }
-}
 .burger-content {
-  top: 70px;
   position: absolute;
   width: 100vw;
   background-color: white;
@@ -322,12 +312,13 @@
 }
 
 .header__burger-content-zone {
-  top: 60px;
+  top: 70px;
   overflow: auto;
+  height: 100vh;
 }
 
 .burger-content-tablet {
-  display: flex;
+  display: none;
   top: 60px;
   padding: 35px 52px 87px 53px;
   background-color: white;
@@ -401,6 +392,8 @@
 .burger-content-tablet__login-to-accaunt {
   margin-top: 10px;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .burger-content-tablet__custom-h4 {
@@ -411,6 +404,81 @@
   line-height: 110%;
   text-align: right;
   letter-spacing: -0.01em;
+  color: #2C2C2C;
+}
+
+.burger-content-tablet__phone-numb {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  letter-spacing: -0.01em;
+  color: #FEC110;
+  margin-bottom: 10px;
+}
+
+.burger-content-tablet__mail-address {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 120%;
+  text-decoration-line: underline;
+  color: #2C2C2C;
+  margin-bottom: 10px;
+}
+
+.burger-content-tablet__work-for-us {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #989898;
+  margin-bottom: 20px;
+}
+
+.burger-content-tablet__addresses {
+  display: flex;
+  justify-content: space-between;
+}
+
+.burger-content-tablet__first-address {
+  width: 50%;
+}
+
+.burger-content-tablet__first-address-name {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 200%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #2C2C2C;
+}
+
+.burger-content-tablet__first-address-value {
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #989898;
+}
+
+.burger-content-tablet__socila-icon {
+  margin-right: 10px;
+}
+
+.burger-content-tablet__desktop-link {
+  margin-top: 10px;
+  font-family: "Arial Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
   color: #2C2C2C;
 }
 
@@ -704,6 +772,45 @@
   color: #2C2C2C;
 }
 
+@media screen and (max-width: 1283px) and (min-width: 745px) {
+  .header__content {
+    padding-right: 100px;
+  }
+
+  .header__nav-links > LI {
+    margin-right: 10px;
+  }
+
+  .main-section__billboard {
+    padding: 80px 40px 60px 60px;
+  }
+}
+@media screen and (max-width: 1073px) and (min-width: 745px) {
+  .header__logo {
+    margin-left: 52px;
+  }
+}
+@media screen and (max-width: 995px) and (min-width: 745px) {
+  .header__logo {
+    margin-left: 10px;
+  }
+
+  .header__content {
+    padding-right: 10px;
+  }
+
+  .second-section__card {
+    min-width: 250px;
+  }
+
+  .main-section__billboard {
+    padding: 80px 20px 60px 20px;
+  }
+
+  .header__nav-links > LI {
+    margin-right: 5px;
+  }
+}
 @media screen and (max-width: 744px) and (min-width: 376px) {
   .header {
     height: 60px;
@@ -838,6 +945,53 @@
 
   .second-section__card-more-info-area {
     padding: 20px;
+  }
+}
+@media screen and (max-width: 623px) and (min-width: 376px) {
+  .second-section__card {
+    height: 390px;
+  }
+}
+@media screen and (max-width: 470px) and (min-width: 376px) {
+  .header__logo {
+    margin-left: 10px;
+  }
+
+  .header__signing-service-btn {
+    padding: 6px 10px;
+  }
+
+  .header__content {
+    padding-right: 0;
+  }
+
+  .main-section__billboard {
+    padding: 40px 20px;
+  }
+
+  .second-section {
+    padding: 100px 20px;
+  }
+
+  .main-section__header {
+    font-size: 36px;
+  }
+
+  .second-section__cards-place {
+    margin-right: -20px;
+  }
+
+  .second-section__card-more-info-area {
+    padding: 5px;
+  }
+
+  .second-section__custom-desctop-headline-4 {
+    font-size: 16px;
+  }
+
+  .second-section__card {
+    margin-right: 20px;
+    height: 350px;
   }
 }
 

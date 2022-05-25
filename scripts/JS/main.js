@@ -7,7 +7,7 @@ const mediaQueryDesktop = window.matchMedia('(min-width: 745px)')
 const mediaQueryTablet = window.matchMedia('(max-width: 744px) and (min-width: 376px)')
 
 headerBurger.onclick = function () {
-
+    // desctop
     if (mediaQueryDesktop.matches) {
         // смена значка
         openHeaderBurger = !openHeaderBurger;
@@ -39,12 +39,15 @@ headerBurger.onclick = function () {
         });  
         }
     }
-
+    // tablet
     if (mediaQueryTablet.matches) {
         openHeaderBurger = !openHeaderBurger;
         (openHeaderBurger) ? headerBurger.src = 'UI Kit/Icons/BurgerClouse.svg' : headerBurger.src = 'UI Kit/Icons/Burger.svg'
         
-        $('.burger-content').css('display', 'none')
+        $('.burger-content').css('display', 'none');
+        $('.burger-content-tablet').css('display', 'flex');
+        $('.header__grey-zone').css('display', 'none');
+        burgerContent.css('top', '60px');
 
         if (burgerContent.hasClass('header__burger-content-zone-false')) {  
             burgerContent.removeClass('header__burger-content-zone-false');  
@@ -57,9 +60,7 @@ headerBurger.onclick = function () {
                 burgerContent.addClass('header__burger-content-zone-false');  
         });  
         }
-    
-    }
-
+    }    
 }
 
 let servicesLink = document.querySelector(".header__services-link");
@@ -132,6 +133,8 @@ caruselArrowRight.onclick = function () {
         currentSlide = ((currentSlide - 1) < 0) ? 2 : currentSlide - 1;
     }, 150);
 }
+
+
 
 // удалить все что ниже 
 // hovers на cards
